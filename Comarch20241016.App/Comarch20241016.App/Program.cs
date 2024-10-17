@@ -54,6 +54,11 @@ namespace Comarch20241016.App
                                 PokazBlad(ex.Message);
                             }
                             break;
+                        case 5:
+                            int[] liczby = WczytajTablice();
+                            PosortujTablice(liczby);
+                            PokazTablice(liczby);
+                            break;
                         default:
                             PokazBlad("Wprowadzono nieprawidłową pozycję menu!");
                             break;
@@ -70,6 +75,44 @@ namespace Comarch20241016.App
                 czyKontynuowac = consoleKey.Key != ConsoleKey.N;
 
             } while (czyKontynuowac);
+        }
+
+        private static void PokazTablice(int[] liczby)
+        {
+            Console.WriteLine($"[{string.Join(", ", liczby)}]");
+        }
+
+        private static void PosortujTablice(int[] liczby)
+        {
+            // Algorytm sortowania bąbelkowego
+            int n = liczby.Length;
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n - i - 1; j++)
+                {
+                    if (liczby[j] > liczby[j + 1])
+                    {
+                        // Zamiana elementów, jeśli są w złej kolejności
+                        int temp = liczby[j];
+                        liczby[j] = liczby[j + 1];
+                        liczby[j + 1] = temp;
+                    }
+                }
+            }
+        }
+
+
+        private static int[] WczytajTablice()
+        {
+            Console.WriteLine("Podaj dowolną ilość liczb oddzielonych spacją: ");
+            string[] sLiczby = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            int[] liczby = new int[sLiczby.Length];
+            for (int i = 0; i < sLiczby.Length; i++)
+            {
+                liczby[i] = int.Parse(sLiczby[i]);
+            }
+
+            return liczby;
         }
 
         private static int CalculateDividy(int x, int y)
@@ -110,6 +153,7 @@ namespace Comarch20241016.App
             Console.WriteLine("  2. Odejmowanie");
             Console.WriteLine("  3. Mnożenie");
             Console.WriteLine("  4. Dzielenie");
+            Console.WriteLine("  5. Sortowanie");
         }
     }
 }
