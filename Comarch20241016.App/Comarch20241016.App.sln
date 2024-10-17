@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comarch20241016.App", "Comarch20241016.App\Comarch20241016.App.csproj", "{C55916B8-E7C0-4648-84F2-BC961B13EAD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Comarch20241016.App", "Comarch20241016.App\Comarch20241016.App.csproj", "{C55916B8-E7C0-4648-84F2-BC961B13EAD7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AA00B44F-E8AC-4933-8181-0CAFFB06DC65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comarch20241016.App.Tests", "Tests\Comarch20241016.App.Tests\Comarch20241016.App.Tests.csproj", "{7B57C9A5-46A9-4D96-9853-351711D57F05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{C55916B8-E7C0-4648-84F2-BC961B13EAD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C55916B8-E7C0-4648-84F2-BC961B13EAD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C55916B8-E7C0-4648-84F2-BC961B13EAD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B57C9A5-46A9-4D96-9853-351711D57F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B57C9A5-46A9-4D96-9853-351711D57F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B57C9A5-46A9-4D96-9853-351711D57F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B57C9A5-46A9-4D96-9853-351711D57F05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7B57C9A5-46A9-4D96-9853-351711D57F05} = {AA00B44F-E8AC-4933-8181-0CAFFB06DC65}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {99EDF35B-A246-439C-AFEF-CBC7837AF0B6}
