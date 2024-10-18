@@ -1,0 +1,54 @@
+﻿<Window
+    x:Class="Bibliotekarz.App.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Bibliotekarz.App"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Bibliotekarz"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <DockPanel>
+        <Menu Height="20" DockPanel.Dock="Top">
+            <MenuItem Header="Plik">
+                <MenuItem Header="Import książek" />
+                <MenuItem Header="Export książek" />
+                <Separator />
+                <MenuItem Header="Zamknij" />
+            </MenuItem>
+            <MenuItem Header="Edycja" />
+            <MenuItem Header="Pomoc" />
+        </Menu>
+        <StatusBar Height="30" DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Text="Wersja 1.0.0.0" />
+            </StatusBarItem>
+        </StatusBar>
+        <Grid>
+            <DataGrid
+                Margin="0,25,0,0"
+                d:ItemsSource="{d:SampleData ItemCount=5}"
+                AutoGenerateColumns="False"
+                IsReadOnly="True"
+                ItemsSource="{Binding Books}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Author}" Header="Autor" Width="2*" />
+                    <DataGridTextColumn Binding="{Binding Title}" Header="Tytuł" Width="3*"/>
+                    <DataGridTextColumn Binding="{Binding PageCount}" Header="Liczba stron" />
+                    <DataGridCheckBoxColumn Binding="{Binding IsBorrowed}" Header="Czy wypożyczona" />
+                    <DataGridTextColumn Binding="{Binding Borrower.FirstName}" Header="Imię wyp." />
+                    <DataGridTextColumn Binding="{Binding Borrower.LastName}" Header="Nazwisko wyp." />
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBox
+                Height="25"
+                Margin="0,0,0,0"
+                VerticalAlignment="Top"
+                VerticalContentAlignment="Center"
+                Text="{Binding FilterText}"
+                TextWrapping="NoWrap" />
+        </Grid>
+    </DockPanel>
+
+</Window>
