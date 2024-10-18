@@ -1,4 +1,4 @@
-﻿namespace Bibliotekarz.App.Model
+﻿namespace Bibliotekarz.Data.Model
 {
     public class Customer
     {

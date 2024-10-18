@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bibliotekarz.App.Model
+namespace Bibliotekarz.Data.Model
 {
     public class Book
     {

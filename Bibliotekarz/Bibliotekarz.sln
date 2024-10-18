@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bibliotekarz.App", "Bibliotekarz.App\Bibliotekarz.App.csproj", "{BDC234A7-8EA3-43E9-B2BD-4EA6F366E15D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bibliotekarz.App", "Bibliotekarz.App\Bibliotekarz.App.csproj", "{BDC234A7-8EA3-43E9-B2BD-4EA6F366E15D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bibliotekarz.Data", "Bibliotekarz.Data\Bibliotekarz.Data.csproj", "{BA4A1C2A-C8C6-4430-A8E5-6F0F9D24B7EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BDC234A7-8EA3-43E9-B2BD-4EA6F366E15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDC234A7-8EA3-43E9-B2BD-4EA6F366E15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDC234A7-8EA3-43E9-B2BD-4EA6F366E15D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA4A1C2A-C8C6-4430-A8E5-6F0F9D24B7EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA4A1C2A-C8C6-4430-A8E5-6F0F9D24B7EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA4A1C2A-C8C6-4430-A8E5-6F0F9D24B7EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA4A1C2A-C8C6-4430-A8E5-6F0F9D24B7EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
